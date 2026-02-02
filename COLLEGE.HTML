@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kamaraj College, Thoothukudi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0b5ed7;
+      --secondary:#f8b400;
+      --dark:#0f172a;
+      --light:#f8fafc;
+      --glass: rgba(255,255,255,0.12);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(120deg,#020617,#020617 40%,#020617);
+      color:var(--light);
+      overflow-x:hidden;
+    }
+    header{
+      position:fixed;top:0;left:0;width:100%;z-index:1000;
+      background:rgba(2,6,23,0.6);backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    nav{
+      max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;
+    }
+    nav .logo{
+      font-weight:700;font-size:20px;color:#fff;
+    }
+    nav ul{display:flex;gap:20px;list-style:none}
+    nav ul li a{
+      color:#e5e7eb;text-decoration:none;font-size:14px;position:relative;
+    }
+    nav ul li a::after{
+      content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--secondary);transition:.3s;
+    }
+    nav ul li a:hover::after{width:100%}
+
+    section{padding:100px 24px}
+    .container{max-width:1200px;margin:auto}
+
+    /* HERO */
+    .hero{
+      min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;text-align:center;
+    }
+    .hero::before{
+      content:'';position:absolute;inset:0;background:radial-gradient(circle at top,rgba(11,94,215,.35),transparent 60%);
+    }
+    .hero-content{position:relative;z-index:2}
+    .hero h1{font-size:48px;font-weight:700;line-height:1.2}
+    .hero p{margin-top:16px;font-size:18px;color:#cbd5f5}
+    .hero .btns{margin-top:28px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .btn{
+      padding:12px 28px;border-radius:30px;border:none;cursor:pointer;font-weight:600;
+      background:linear-gradient(135deg,var(--primary),#2563eb);color:#fff;
+    }
+    .btn.alt{background:transparent;border:1px solid rgba(255,255,255,0.25)}
+
+    /* ABOUT */
+    .glass{
+      background:var(--glass);border:1px solid rgba(255,255,255,0.15);
+      border-radius:20px;padding:30px;backdrop-filter: blur(14px);
+    }
+    .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px}
+    .about-grid img{width:100%;border-radius:16px}
+
+    /* DEPARTMENTS */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));
+      border:1px solid rgba(255,255,255,0.15);border-radius:18px;padding:24px;
+      transition:.3s;
+    }
+    .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.4)}
+    .card h3{margin-bottom:10px}
+
+    /* STATS */
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;text-align:center}
+    .stat h2{font-size:40px;color:var(--secondary)}
+
+    /* CONTACT */
+    form{display:grid;gap:16px}
+    input,textarea{
+      padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.2);
+      background:rgba(2,6,23,.6);color:#fff
+    }
+    textarea{resize:none;height:120px}
+
+    footer{
+      background:#020617;border-top:1px solid rgba(255,255,255,.08);
+      padding:30px 24px;text-align:center;color:#94a3b8
+    }
+
+    @media(max-width:900px){
+      .about-grid{grid-template-columns:1fr}
+      .hero h1{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Kamaraj College</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#departments">Departments</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Kamaraj College, Thoothukudi</h1>
+    <p>Excellence in Education • Innovation • Discipline</p>
+    <div class="btns">
+      <button class="btn">Admissions Open</button>
+      <button class="btn alt">Explore Campus</button>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="glass">
+      <h2>About Our College</h2>
+      <p style="margin-top:12px;line-height:1.7">
+        Kamaraj College, Thoothukudi is a premier institution dedicated to academic excellence, character building,
+        and holistic development. With experienced faculty, modern infrastructure, and a vibrant campus life,
+        the college empowers students to succeed globally.
+      </p>
+    </div>
+    <img src="https://www.collegebatch.com/static/clg-gallery/kamaraj-college-tuticorin-213660.webp" alt="Kamaraj College Thoothukudi Campus" />
+  </div>
+</section>
+
+<section id="departments">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:40px">Departments</h2>
+    <div class="cards">
+      <div class="card"><h3>Computer Science</h3><p>Programming, AI, Cloud & Software Development</p></div>
+      <div class="card"><h3>Commerce</h3><p>Accounting, Finance & Business Studies</p></div>
+      <div class="card"><h3>Physics</h3><p>Research-oriented science education</p></div>
+      <div class="card"><h3>Mathematics</h3><p>Pure & Applied Mathematics</p></div>
+      <div class="card"><h3>English</h3><p>Literature, Communication & Soft Skills</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container stats">
+    <div class="glass stat"><h2>50+</h2><p>Years of Excellence</p></div>
+    <div class="glass stat"><h2>100+</h2><p>Faculty Members</p></div>
+    <div class="glass stat"><h2>5000+</h2><p>Students</p></div>
+    <div class="glass stat"><h2>30+</h2><p>Courses</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container about-grid">
+    <div class="glass">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+    <div class="glass">
+      <h3>Address</h3>
+      <p style="margin-top:10px">Kamaraj College,<br>Thoothukudi, Tamil Nadu, India</p>
+      <p style="margin-top:10px">📞 +91 XXXXX XXXXX</p>
+      <p>✉️ info@kamarajcollege.edu</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Kamaraj College, Thoothukudi • Designed with ❤️
+</footer>
+
+</body>
+</html>
